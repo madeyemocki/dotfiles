@@ -1,0 +1,45 @@
+[user]
+	name = Anna Mockenhaupt
+	email = 
+[core]
+	excludesfile = /Users/annamockenhaupt/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/annamockenhaupt/.stCommitMsg
+[alias]
+	mrg = merge
+	rb = rebase
+	st = status -sb
+	standup = "!git log --since yesterday --author `git config user.email` --pretty=short"
+	ci = commit
+	br = branch
+	co = checkout
+	cod = checkout develop
+	com = checkout master
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	pl = pull
+	ps = push
+	dm = diff origin/master...HEAD     # Diff zu origin/master
+	dd = diff origin/develop...HEAD     # Diff zu origin/develop
+	df = diff
+	ru = remote update
+	mrgm = !sh -c 'BRANCH=$(git name-rev --name-only HEAD) && git co master && git pull && git merge --no-ff $BRANCH && git lg' - # merge aktuellen branch in master
+	mrgb = !sh -c 'TARGETBRANCH=$1 && BRANCH=$(git name-rev --name-only HEAD) && git co $TARGETBRANCH && git pull && git merge --no-ff $BRANCH && git lg' - # merge aktuellen branch in custom branch
+	testReady = !sh -c 'BRANCH=$(git name-rev --name-only HEAD) && git co testReady && git pull && git merge --no-ff $BRANCH && git lg' - # merge aktuellen branch in testReady
+	psb = "!sh -c 'git push --set-upstream origin $(git name-rev --name-only HEAD) $@' -"
+	rbm = rebase origin/master
+	lgf = log --decorate=short --graph
+	lgo = git lg origin/master
+	rbc = rebase --continue
+	pfo = pull --ff-only
+	ddd = !sh -c 'git dd > ~/Desktop/updated.diff'
+	ft = fetch
+	preview = !sh -c 'BRANCH=$(git name-rev --name-only HEAD) && git co preview && git pull && git merge --no-ff $BRANCH && git lg' - # merge aktuellen branch in testReady
+	movetag = "!f() { TAG=${1}; TARGET_COMMIT=${2}; git checkout $TARGET_COMMIT; git tag -d $TAG; git push --delete origin $TAG; OLD_DATE=$GIT_COMMITTER_DATE; GIT_COMMITTER_DATE=\"$(git show --format=%aD | head -1)\"; git tag -a $TAG -m $TAG; GIT_COMMITTER_DATE=$OLD_DATE; git push --tags; git cod; }; f" #move a tag from current position to a commit defined by hash - on remote and on local branches - the original commit date is kept - example: movetag web-0.1.1 6fa749a
+	sqd = "!sh -c 'git reset $(git merge-base develop $(git rev-parse --abbrev-ref HEAD))' -"
+	sq = "!sh -c 'git reset $(git merge-base ${1} $(git rev-parse --abbrev-ref HEAD))' -"
