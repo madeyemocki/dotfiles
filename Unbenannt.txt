@@ -1,0 +1,55 @@
+{
+	"editor.fontSize": 14,
+	"editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+	"editor.minimap.enabled": false,
+	"editor.wordWrap": "on",
+	"editor.rulers": [80],
+	"editor.renderWhitespace": "all",
+	"editor.suggestSelection": "first",
+	"editor.fontLigatures": true,
+	"editor.fontWeight": "400",
+	"editor.gotoLocation.multipleDefinitions": "goto",
+	"editor.gotoLocation.multipleImplementations": "goto",
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/*.pyc": true,
+	},
+	"files.associations": {
+		"*.html": "jinja-html",
+		"*.mjs": "javascript"
+	},
+	"files.trimTrailingWhitespace": "true",
+	"workbench.editor.enablePreview": false,
+	"emmet.includeLanguages": {
+		"jinja-html": "html"
+	},
+	"eslint.alwaysShowStatus": true,
+	"breadcrumbs.enabled": true,
+	"files.autoSave": "onFocusChange",
+	"scss.lint.boxModel": "warning",
+	"scss.lint.duplicateProperties": "error",
+	"scss.lint.float": "error",
+	"scss.lint.idSelector": "error",
+	"scss.lint.ieHack": "error",
+	"scss.lint.important": "warning",
+	"scss.lint.importStatement": "warning",
+	"scss.lint.universalSelector": "warning",
+	"scss.lint.zeroUnits": "error",
+	"git.autorefresh": false,
+	"restructuredtext.linter.disabled": true,
+	"terminal.integrated.rendererType": "dom",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"typescript.validate.enable": false,
+	"javascript.validate.enable": false,
+	"editor.insertSpaces": false,
+	"extensions.ignoreRecommendations": true,
+	"editor.accessibilitySupport": "off",
+	"bracketPairColorizer.depreciation-notice": false,
+	"window.zoomLevel": 1
+}

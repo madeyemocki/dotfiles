@@ -1,0 +1,74 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = ssh://git@github.com/madeyemocki/zeit.web
+	fetch = +refs/heads/*:refs/remotes/origin/*
+	prune = true
+[branch "master"]
+	remote = zeitonline
+	merge = refs/heads/master
+	prune = true
+[remote "hoshi"]
+	url = git@github.com:zon-hoppe/zeit.web.git
+	fetch = +refs/heads/*:refs/remotes/hoshi/*
+	prune = true
+[remote "andreas"]
+	url = git@github.com:AWieczorreck/zeit.web.git
+	fetch = +refs/heads/*:refs/remotes/AWieczorreck/*
+	prune = true
+[remote "zeitonline"]
+	url = git@github.com:ZeitOnline/zeit.web.git
+	fetch = +refs/heads/*:refs/remotes/zeitonline/*
+	prune = true
+[remote "moritz"]
+	url = git@github.com:mstoltenburg/zeit.web.git
+	fetch = +refs/heads/*:refs/remotes/moritz/*
+	prune = true
+[remote "nico"]
+	url = git@github.com:codecandies/zeit.web.git
+	fetch = +refs/heads/*:refs/remotes/nico/*
+	prune = true
+[remote "ron"]
+	url = git@github.com:rdrongow/zeit.web.git
+	fetch = +refs/heads/*:refs/remotes/ron/*
+	prune = true
+[remote "thomaspuppe"]
+	url = git@github.com:thomaspuppe/zeit.web.git
+	fetch = +refs/heads/*:refs/remotes/thomaspuppe/*
+	prune = true
+[remote "tobiaskabbeck"]
+	url = git@github.com:kabbeck/zeit.web.git
+	fetch = +refs/heads/*:refs/remotes/kabbeck/*
+	prune = true
+[remote "paul"]
+	url = git@github.com:paulbauer/zeit.web.git
+	fetch = +refs/heads/*:refs/remotes/paulbauer/*
+	prune = true
+[remote "dkreitschmann"]
+	url = git@github.com:dkreitschmann/zeit.web.git
+	fetch = +refs/heads/*:refs/remotes/dkreitschmann/*
+	prune = true
+[remote "wosc"]
+	url = git@github.com:wosc/zeit.web.git
+	fetch = +refs/heads/*:refs/remotes/wosc/*
+	prune = true
+[remote "witsch"]
+	url = git@github.com:witsch/zeit.web.git
+	fetch = +refs/heads/*:refs/remotes/witsch/*
+	prune = true
+[submodule "src/zeit/web/app/spec"]
+	active = true
+	url = git@github.com:ZeitOnline/docs-zappi.git
+[remote "louisa"]
+	url = git@github.com:louika/zeit.web.git
+	fetch = +refs/heads/*:refs/remotes/louisa/*
+	prune = true
+[remote "hennes"]
+	url = git@github.com:hennnnes/zeit.web.git
+	fetch = +refs/heads/*:refs/remotes/hennes/*
+	prune = true
